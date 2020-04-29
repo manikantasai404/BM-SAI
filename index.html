@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="src.js"></script>
+    <title>Stock calculations</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #3498db;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 50;
+        }
+
+        .nav {
+            background: #000;
+            height: 60px;
+
+        }
+
+        .nav h1 {
+            color: #7986cb;
+            text-align: center;
+           
+        }
+
+        h2 {
+            visibility: hidden;
+        }
+
+        .first {
+            margin: 50px;
+            padding: 50px;
+
+        }
+
+        #price {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            outline: none;
+
+
+        }
+
+        #discount {
+            margin: 10px 10px 10px 20px;
+            padding: 10px;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        #sharePrice {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        #noOfShares {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        #total {
+            margin: 10px 10px 10px 140px;
+            padding: 10px;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        #loss {
+            margin: 10px 10px 10px 140px;
+            padding: 10px;
+            border-radius: 10px;
+            outline: none;
+        }
+        #Exit {
+            margin: 10px 10px 10px 140px;
+            padding: 10px;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        #stopLoss {
+            margin: 10px 10px 10px 140px;
+            padding: 10px;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        .button--moema {
+            padding: 1em 1em;
+            border-radius: 5px;
+            background: #3da6e3;
+            color: #fff;
+            outline: none;
+            margin-left: 140px;
+            width: 190px;
+            border-radius: 100px;
+            height: 42px;
+            border:none;
+        }
+
+        label {
+            color: red
+        }
+
+
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: whitesmoke;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 50;
+            }
+
+            .button--moema {
+                color: white;
+                margin-left: 82px;
+                margin-top: 10px;
+            }
+
+            .nav h1 {
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+            .nav{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #price {
+                margin-left: 60px;
+                box-shadow: 0px 2px 5px 5px #88888847;
+                border:none;
+                width: 210px;
+            }
+
+            #discount {
+                margin-left: 60px;
+                box-shadow: 0px 2px 5px 5px #88888847;
+                border:none;
+                width: 210px;
+            }
+
+            #sharePrice {
+                margin-left: 60px;
+                box-shadow: 0px 2px 5px 5px #88888847;
+                border:none;
+                width: 210px;
+
+            }
+
+            #noOfShares {
+                margin-left: 60px;
+                box-shadow: 0px 2px 5px 5px #88888847;
+                border:none;
+                width: 210px;
+            }
+
+            #total {
+                margin-left: 24px;
+                box-shadow: 0px 2px 5px 5px #88888847;
+                border:none;
+                width: 278px;
+                margin-top: 10px;
+                background-color: rgb(174, 255, 167);
+            }
+
+            #loss {
+                margin-left: 24px;
+                box-shadow: 0px 2px 5px 5px #88888847;
+                border:none;
+                width: 278px;
+                margin-top: 10px;
+                background-color: rgb(253, 141, 121);
+            }
+            #Exit {
+                margin-left: 24px;
+                box-shadow: 0px 2px 5px 5px #88888847;
+                border:none;
+                width: 278px;
+                margin-top: 10px;
+                background-color: rgb(174, 255, 167);
+            }
+
+            #stopLoss {
+                margin-left: 24px;
+                box-shadow: 0px 2px 5px 5px #88888847;
+                width: 278px;
+                margin-top: 10px;
+                background-color: rgb(253, 141, 121);
+                border:none;
+            }
+
+            label {
+                margin-left: 85px;
+                color: #2b1e1ecf;
+                font-size: large;
+                font-weight: 700;
+            }
+
+
+        .first {
+            margin: 0px;
+            padding: 15px;
+
+        }
+
+        .nav h2 {
+            visibility: hidden;
+            color: white;
+            text-align: start;
+            margin-top: 0px;
+            font-size: 25px;
+
+        }
+
+        
+    }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <div class="nav">
+        <h1>Calculate Your Margin </h1>
+        <h2>SAI</h2>
+    </div>
+
+
+    <!-- marquee -->
+    <marquee>Don't get emotional attach with money</marquee>
+
+    <!-- Total Inputs div -->
+    <div class="first">
+
+        <!-- Amount Field -->
+        <label for="price">Enter the amount:</label>
+        <input id="price" placeholder="Enter your amount">
+
+        <!-- Discount Field -->
+        <br>
+        <label for="discount"> % u r expecting:</label>
+        <input id="discount" placeholder="Enter your Expecting %">
+
+        <!-- Button to get profit and loss -->
+        <br>
+        <button onclick="getPrice()" class="button--moema">
+            Get total
+        </button>
+
+        <!-- Profit field -->
+        <br>
+        <label for="total" class="profit">Book your profit for:</label>
+        <input readonly id="total" placeholder="Rupees">
+
+        <!-- Loss field -->
+        <br>
+        <label for="loss" class="losses">Book your loss for:</label>
+        <input readonly id="loss" placeholder="Rupees">
+<hr>
+        <!-- Share price -->
+        <br>
+        <label for="sharePrice" class="Sprice">Enter the shareprice</label>
+        <input id="sharePrice" placeholder="Enter the share price">
+
+        <!-- No Of Shares -->
+        <br>
+        <label for="noOfShares" class="totalShares">Enter no of shares</label>
+        <input id="noOfShares" placeholder="No of shares">
+
+        <!-- Button to get Exit and Stoploss -->
+        <br>
+        <button onclick="getAmount()" class="button--moema">
+            Get Amount
+        </button>
+
+        <!-- Stoploss field -->
+        <br>
+        <label for="stopLoss" class="sLoss">Keep stoploss at:</label>
+        <input readonly id="stopLoss" placeholder="Rupees">
+
+        <!-- Exit field -->
+        <br>
+        <label for="Exit" class="bExit">Book your Profit for:</label>
+        <input readonly id="Exit" placeholder="Rupees">
+
+    </div>
+</body>
+</html>
