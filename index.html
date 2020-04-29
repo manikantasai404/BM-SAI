@@ -15,7 +15,7 @@
             /* font-family: 'Roboto', sans-serif;
             font-weight: 50; */
         }
-       
+
 
         .nav {
             background: #000;
@@ -26,12 +26,10 @@
         .nav h1 {
             color: #7986cb;
             text-align: center;
-           
+
         }
 
-        h2 {
-            visibility: hidden;
-        }
+
 
         .first {
             margin: 50px;
@@ -44,8 +42,13 @@
             padding: 10px;
             border-radius: 10px;
             outline: none;
+        }
 
-
+        #marginee {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            outline: none;
         }
 
         #discount {
@@ -76,12 +79,26 @@
             outline: none;
         }
 
+        #totalmoney {
+            margin: 10px 10px 10px 140px;
+            padding: 10px;
+            border-radius: 10px;
+            outline: none;
+        }
+        #totalShares{
+            margin: 10px 10px 10px 140px;
+            padding: 10px;
+            border-radius: 10px;
+            outline: none;
+        }
+
         #loss {
             margin: 10px 10px 10px 140px;
             padding: 10px;
             border-radius: 10px;
             outline: none;
         }
+
         #Exit {
             margin: 10px 10px 10px 140px;
             padding: 10px;
@@ -106,7 +123,7 @@
             width: 190px;
             border-radius: 100px;
             height: 42px;
-            border:none;
+            border: none;
         }
 
         label {
@@ -122,7 +139,7 @@
                 /* font-family: 'Roboto', sans-serif;
                 font-weight: 50; */
             }
-            
+
             .button--moema {
                 color: white;
                 margin-left: 100px;
@@ -134,29 +151,38 @@
                 text-align: center;
                 font-size: 20px;
             }
-            .nav{
+
+            .nav {
                 display: flex;
                 align-items: center;
                 justify-content: center;
             }
+
             #price {
                 margin-left: 80px;
                 box-shadow: 0px 2px 5px 5px #88888847;
-                border:none;
+                border: none;
+                width: 210px;
+            }
+
+            #marginee {
+                margin-left: 80px;
+                box-shadow: 0px 2px 5px 5px #88888847;
+                border: none;
                 width: 210px;
             }
 
             #discount {
                 margin-left: 80px;
                 box-shadow: 0px 2px 5px 5px #88888847;
-                border:none;
+                border: none;
                 width: 210px;
             }
 
             #sharePrice {
                 margin-left: 80px;
                 box-shadow: 0px 2px 5px 5px #88888847;
-                border:none;
+                border: none;
                 width: 210px;
 
             }
@@ -164,14 +190,31 @@
             #noOfShares {
                 margin-left: 80px;
                 box-shadow: 0px 2px 5px 5px #88888847;
-                border:none;
+                border: none;
                 width: 210px;
             }
 
             #total {
                 margin-left: 50px;
                 box-shadow: 0px 2px 5px 5px #88888847;
-                border:none;
+                border: none;
+                width: 278px;
+                margin-top: 10px;
+                background-color: rgb(174, 255, 167);
+            }
+
+            #totalmoney {
+                margin-left: 50px;
+                box-shadow: 0px 2px 5px 5px #88888847;
+                border: none;
+                width: 278px;
+                margin-top: 10px;
+                background-color: rgb(174, 255, 167);
+            }
+            #totalShares{
+                margin-left: 50px;
+                box-shadow: 0px 2px 5px 5px #88888847;
+                border: none;
                 width: 278px;
                 margin-top: 10px;
                 background-color: rgb(174, 255, 167);
@@ -180,15 +223,16 @@
             #loss {
                 margin-left: 50px;
                 box-shadow: 0px 2px 5px 5px #88888847;
-                border:none;
+                border: none;
                 width: 278px;
                 margin-top: 10px;
                 background-color: rgb(253, 141, 121);
             }
+
             #Exit {
                 margin-left: 50px;
                 box-shadow: 0px 2px 5px 5px #88888847;
-                border:none;
+                border: none;
                 width: 278px;
                 margin-top: 10px;
                 background-color: rgb(174, 255, 167);
@@ -200,7 +244,7 @@
                 width: 278px;
                 margin-top: 10px;
                 background-color: rgb(253, 141, 121);
-                border:none;
+                border: none;
             }
 
             label {
@@ -211,23 +255,28 @@
             }
 
 
-        .first {
-            margin: 0px;
-            padding: 15px;
+            .first {
+                margin: 0px;
+                padding: 15px;
+
+            }
+
+
+            h2 {
+                text-align: center;
+                color: black;
+                font-size: 1.5em;
+                margin-block-start: 0em;
+                margin-block-end: 0em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                font-weight: bold;
+                font-style: italic;
+            }
+
+
 
         }
-
-        .nav h2 {
-            visibility: hidden;
-            color: white;
-            text-align: start;
-            margin-top: 0px;
-            font-size: 25px;
-
-        }
-
-        
-    }
     </style>
 </head>
 
@@ -236,12 +285,13 @@
     <!-- Navigation bar -->
     <div class="nav">
         <h1>Calculate Your Margin </h1>
-        <h2>SAI</h2>
+
     </div>
 
 
     <!-- marquee -->
     <marquee>Don't get emotional attach with money</marquee>
+    <h2>Your investment</h2>
 
     <!-- Total Inputs div -->
     <div class="first">
@@ -258,7 +308,7 @@
         <!-- Button to get profit and loss -->
         <br>
         <button onclick="getPrice()" class="button--moema">
-            Get total
+            Profit & Loss
         </button>
 
         <!-- Profit field -->
@@ -270,21 +320,56 @@
         <br>
         <label for="loss" class="losses">Book your loss for:</label>
         <input readonly id="loss" placeholder="Rupees">
-<hr>
-        <!-- Share price -->
+        <hr>
+
+        <h2>Calculate margin</h2>
+
+        <!-- Discount Field -->
+        <br>
+        <label for="marginee"> Margin by broker </label>
+        <input id="marginee" placeholder="Enter the margin">
+
+        <!-- Button to get profit and loss -->
+        <br>
+        <button onclick="getTotalAmount()" class="button--moema">
+           Total Amount
+        </button>
+
+        <!-- Profit field -->
+        <br>
+        <label for="totalmoney" class="profit">Total amount you had:</label>
+        <input readonly id="totalmoney" placeholder="Rupees">
+
+
+
+
+        <hr>
+        <h2>No of Shares You Get</h2>
+
+        <!-- Discount Field -->
         <br>
         <label for="sharePrice" class="Sprice">Enter the shareprice</label>
         <input id="sharePrice" placeholder="Enter the share price">
 
-        <!-- No Of Shares -->
+        <!-- Button to get profit and loss -->
         <br>
-        <label for="noOfShares" class="totalShares">Enter no of shares</label>
-        <input id="noOfShares" placeholder="No of shares">
+        <button onclick="getTotalShares()" class="button--moema">
+            Total Shares
+        </button>
+
+        <!-- Profit field -->
+        <br>
+        <label for="totalShares" class="profit">Total shares You can take:</label>
+        <input readonly id="totalShares" placeholder="Total shares">
+
+
+        <h2>Stoploss & Target</h2>
+
 
         <!-- Button to get Exit and Stoploss -->
         <br>
         <button onclick="getAmount()" class="button--moema">
-            Get Amount
+            Stoploss & Target
         </button>
 
         <!-- Stoploss field -->
@@ -296,7 +381,8 @@
         <br>
         <label for="Exit" class="bExit">Book your Profit for:</label>
         <input readonly id="Exit" placeholder="Rupees">
-<hr>
+        <hr>
     </div>
 </body>
+
 </html>
